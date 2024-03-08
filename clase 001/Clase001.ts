@@ -46,4 +46,4 @@ function fibo(n:number) {
     return fibCurr
 }
 
-console.log(fibo(20));
+console.log(fibo(2));
