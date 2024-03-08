@@ -16,3 +16,6 @@ function canSum(n:number, arr:number[]) {
 console.log(1,canSum(8,[5,3,4,7]));
 console.log(2,canSum(4,[5,3,3,7]));
 
+/*
+la complejidad algoritmica es O(n**2)
+*/
