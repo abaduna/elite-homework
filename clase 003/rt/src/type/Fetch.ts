@@ -7,11 +7,11 @@ export interface State {
 
  export type ActionType = {
     type: string;
-    payload?: data; 
+    payload: data ; 
   };
   export interface data {
     info?:info
-    results?:Character[]
+    results?:Character[] 
   }
   export interface info {
     count:string
@@ -21,7 +21,7 @@ export interface State {
     
 }
 
-interface Character {
+ export interface Character {
     id:number
     name:string,
     status:string
@@ -29,6 +29,7 @@ interface Character {
     type:string|null
     gender:String
     origin:origin
+    image:string
 }
 
 interface origin {

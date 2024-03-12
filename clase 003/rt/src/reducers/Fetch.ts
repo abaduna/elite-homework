@@ -1,4 +1,4 @@
-import { SET_ADD,SET_ERROR } from "../action/Fetch"
+import { SET_ADD,SET_ERROR, SET_SERCH } from "../action/Fetch"
 import { ActionType, State } from "../type/Fetch"
 export const initialState:State = {
     data: {
@@ -13,9 +13,13 @@ export const fetchReducer = (state:State = initialState , { type, payload}:Actio
   switch (type) {
 
   case SET_ADD:
-    return { ...state,loading:false , data:payload }
+    console.log(`setAdd`);
+    console.log(payload);
+    return { ...state,loading:false , data:{info:payload.info,results:payload.results} }
     case SET_ERROR:
-        return { ...state,loading:false,error:true  }
+        return { ...state,loading:false,error:true  } //SET_SERCH
+    // case SET_SERCH:
+    //     return { ...state,loading:false,error:true,data: info:undefined  } //SET_SERCH
   default:
     return state
   }

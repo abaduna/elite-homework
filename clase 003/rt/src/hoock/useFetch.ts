@@ -11,10 +11,10 @@ export const useFetch =()=>{
         try {
             const {data} = await API.get("")
             dispatch({type:SET_ADD,payload:data})
-            console.log(data);
+            
             
         } catch (error) {
-            dispatch({type:SET_ERROR})
+            dispatch({type:SET_ERROR,payload:{}})
         }
     }
     return {state,fetchData}
