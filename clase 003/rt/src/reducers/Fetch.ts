@@ -1,12 +1,15 @@
 import { SET_ADD,SET_ERROR } from "../action/Fetch"
 import { ActionType, State } from "../type/Fetch"
 export const initialState:State = {
-    data:{},
+    data: {
+        info: undefined,
+        results: [],
+      },
     error:false,
     loading:true
 }
 
-export const fetchReducer = (state:State = initialState, { type, payload}:ActionType) => {
+export const fetchReducer = (state:State = initialState , { type, payload}:ActionType) => {
   switch (type) {
 
   case SET_ADD:

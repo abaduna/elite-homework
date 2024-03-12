@@ -1,21 +1,17 @@
 export interface State {
-    data: unknown; 
+    data: data; 
     error: boolean;
     loading: boolean;
   }
-  export const initialState: State = {
-    data: {},
-    error: false,
-    loading: true,
-  };
+
 
  export type ActionType = {
     type: string;
-    payload?: unknown; 
+    payload?: data; 
   };
   export interface data {
-    info:info
-    result:Character[]
+    info?:info
+    results?:Character[]
   }
   export interface info {
     count:string

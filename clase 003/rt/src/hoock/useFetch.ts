@@ -1,7 +1,8 @@
 import { API } from "../APi"
 import { SET_ADD, SET_ERROR } from "../action/Fetch"
-import { initialState,fetchReducer } from "../reducers/Fetch"
+import { fetchReducer,initialState } from "../reducers/Fetch"
 import {useReducer}from "react"
+
 
 export const useFetch =()=>{
     const [state, dispatch] = useReducer(fetchReducer,initialState)
